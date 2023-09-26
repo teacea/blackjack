@@ -38,7 +38,6 @@ card = get_random_number()
 async def cmd_start_game(message):
     user['in_game'] = True
     global card
-    global card_sum
     card_sum = 0
     card_sum+=card
     await message.answer(f'Вам выпало:{card}. Выберите действие:', reply_markup=kb.game)
